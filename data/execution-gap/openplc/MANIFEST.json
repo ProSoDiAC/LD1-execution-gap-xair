@@ -1,0 +1,37 @@
+{
+  "manifest_version": 1,
+  "directory": "data/execution-gap/openplc",
+  "kind": "retroactive",
+  "commands": [
+    "./scripts/run_openplc.sh"
+  ],
+  "seeds": [],
+  "files": [
+    {
+      "path": "e24_openplc.csv",
+      "bytes": 184635,
+      "sha256": "d5122122f81b8a6ce68dee7ad9eada0ae1e75b2c3286335df4384ca55ed1ab1b"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 149,
+      "sha256": "5263b655ab02dd090df4d8135f340d03a3dc8003c437399f0f10caf6cc5ba167"
+    }
+  ],
+  "environment_recorded_at_run_time": {
+    "environment.txt": [
+      "{\"runtime\": \"OpenPLC v3 (b5d4135), task interval 10 ms, Modbus TCP\",",
+      " \"bridge\": \"Modbus polling every 5 ms -> XAIR\", \"loadavg\": \"47.60 26.66 16.39\"}"
+    ]
+  },
+  "notes": [
+    "E24; program docker/openplc/cell_ctl.st as of v1.6 (registers 0-8; register 9, the conveyor, was added in v1.7 without changing decisions or result codes)"
+  ],
+  "manifest_written": "2026-10-05T23:20:36+00:00",
+  "not_recorded_at_run_time": [
+    "git commit",
+    "dependency versions beyond environment.txt",
+    "container image digests"
+  ],
+  "published_snapshot": "github.com/ProSoDiAC/LD1-execution-gap-xair (single-commit snapshot)"
+}
